@@ -8,6 +8,8 @@ namespace parentesisBalenceados.Tests
     {
         [Theory]
         [InlineData("[(()[]())]")]
+        [InlineData("[(()[][)[]")]
+        [InlineData("[(()[]())](())")]
         public void VerificaParentesis_VerificarParentesisEmOrdemCorreta(string strParentesis)
         {
             bool resultado = Program.VerificaParentesis(strParentesis);
